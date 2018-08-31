@@ -8,7 +8,36 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+main {
+    margin-bottom:100px;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.btn-outline-warning
+{
+    color: $orange !important;
+    border-color: $orange !important;
+}
+
+.btn-outline-warning:hover, .btn-outline-warning:active
+{
+    color: $white !important;
+    background-color: $orange !important;
+}
+
+.btn-outline-warning:focus
+{
+    box-shadow: 0 0 0 0.2rem rgba(246, 153, 63, 0.5) !important; // $orange with transparency
+}
+
+#alert
+{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 10;
 }
