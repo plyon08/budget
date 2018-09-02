@@ -8,7 +8,6 @@
                     <div class='form-group'>
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
-                            <option value="All">All</option>
                             <option value="Income">Income</option>
                             <option value="Entertainment">Entertainment</option>
                             <option value="Gas">Gas</option>
