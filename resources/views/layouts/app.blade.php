@@ -5,7 +5,7 @@
 
 <body>
 
-    @include('includes.success');
+    @include('includes.success')
     
     <main class="container py-3">
         @yield('content')
