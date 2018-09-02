@@ -18,7 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('user_id')->nullable();
             $table->date('transaction_date');
             $table->decimal('dollar_amount');
-            $table->string('category')->nullable();
+            $table->string('category');
             $table->boolean('repeat')->nullable();
             $table->timestamps();
         });
