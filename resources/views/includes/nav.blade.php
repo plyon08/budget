@@ -12,12 +12,14 @@
                             <option value="Entertainment">Entertainment</option>
                             <option value="Gas">Gas</option>
                             <option value="Groceries">Groceries</option>
+                            <option value="Eating Out">Eating Out</option>
                             <option value="Shopping">Shopping</option>
                             <option value="Rent">Rent</option>
                             <option value="Phone">Phone</option>
                             <option value="Internet">Internet</option>
                             <option value="Electric">Electric</option>
-                            <option value="Insurance">Insurance</option>
+                            <option value="Car Insurance">Car Insurance</option>
+                            <option value="Health Insurance">Health Insurance</option>
                             <option value="Car">Car</option>
                         </select>
                     </div>
