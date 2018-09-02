@@ -25,6 +25,9 @@ class TransactionController extends Controller
         $category = null;
         $month = null;
         $year = null;
+        $balance = 0.00;
+        $income = 0.00;
+        $expense = 0.00;
         $query = Transaction::orderBy('transaction_date', 'desc');
 
         if (!empty($request->input('category'))) {
@@ -42,7 +45,19 @@ class TransactionController extends Controller
         
         $transactions = $query->get();
 
-        return view('index', compact('transactions'));
+        foreach ($transactions as $t) {
+            if ('Income' == $t->category) {
+                $income += $t->dollar_amount;
+                $income = number_format($income, 2);
+            } else {
+                $expense += $t->dollar_amount;
+                $expense = number_format($expense, 2);
+            }
+            $balance = $income - $expense;
+            $balance = number_format($balance, 2);
+        }
+
+        return view('index', compact('transactions', 'income', 'expense', 'balance'));
     }
 
     /**
