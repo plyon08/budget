@@ -80,7 +80,8 @@ class TransactionController extends Controller
     {
         $this->validate(request(), [
             'transaction_date' => 'required|date',
-            'dollar_amount' => 'required|numeric'
+            'dollar_amount' => 'required|numeric',
+            'category' => 'required'
         ]);
 
         $transaction = new Transaction;
