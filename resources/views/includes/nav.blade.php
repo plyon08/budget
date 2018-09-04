@@ -3,9 +3,9 @@
         @auth
         <div class="collapse" id="filter-form">
             <div class="bg-dark">
-                <form class='form-inline' method='GET' action="{{ route('index') }}">
+                <form class='form-inline justify-content-between' method='GET' action="{{ route('index') }}">
                     @csrf
-                    <div class='form-group m-sm-1'>
+                    <div class='form-group'>
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
                             <option value="Income">Income</option>
@@ -23,7 +23,7 @@
                             <option value="Car">Car</option>
                         </select>
                     </div>
-                    <div class='form-group m-sm-1'>
+                    <div class='form-group ml-1 mr-1'>
                         <select name="month" id="month" class="custom-select custom-select-sm">
                             <option value="">Month</option>
                             <option value=01>January</option>
@@ -40,7 +40,7 @@
                             <option value=12>December</option>
                         </select>
                     </div>
-                    <div class='form-group m-sm-1'>
+                    <div class='form-group'>
                         <select name="year" id="year" class="custom-select custom-select-sm">
                             <option value="">Year</option>
                             <option value="2018">2018</option>
