@@ -89,6 +89,7 @@ class TransactionController extends Controller
         $transaction->transaction_date = request('transaction_date');
         $transaction->dollar_amount = request('dollar_amount');
         $transaction->category = request('category');
+
         $transaction->save();
 
         session()->flash('message', 'Transaction Saved Successfully!');
@@ -104,7 +105,7 @@ class TransactionController extends Controller
      */
     public function show(Transaction $transaction)
     {
-        //
+        return view('show', compact('transaction'));
     }
 
     /**
@@ -115,7 +116,7 @@ class TransactionController extends Controller
      */
     public function edit(Transaction $transaction)
     {
-        //
+        return view('edit', compact('transaction'));
     }
 
     /**
@@ -127,7 +128,23 @@ class TransactionController extends Controller
      */
     public function update(Request $request, Transaction $transaction)
     {
-        //
+        $this->validate(request(), [
+            'transaction_date' => 'required|date',
+            'dollar_amount' => 'required|numeric',
+            'category' => 'required'
+        ]);
+
+        $transaction = Transaction::find($transaction->id);
+
+        $transaction->transaction_date = request('transaction_date');
+        $transaction->dollar_amount = request('dollar_amount');
+        $transaction->category = request('category');
+        
+        $transaction->save();
+
+        session()->flash('message', 'Transaction Updated Successfully!');
+
+        return redirect()->route('index');
     }
 
     /**
@@ -138,6 +155,12 @@ class TransactionController extends Controller
      */
     public function destroy(Transaction $transaction)
     {
-        //
+        $tansaction = Transaction::find($transaction->id);
+
+        $transaction->delete();
+
+        session()->flash('message', 'Transaction Deleted Successfully!');
+
+        return redirect()->route('index');
     }
 }
