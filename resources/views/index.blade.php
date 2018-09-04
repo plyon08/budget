@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row income-amount text-center">
+    <div class="row income text-center">
         <div class="col">
             <h5>Income:</h5>
         </div>
@@ -9,7 +9,7 @@
             <h5>${{ $income }}</h5>
         </div>
     </div>
-    <div class="row expense-amount text-center">
+    <div class="row expense text-center">
         <div class="col">
             <h5>Expense:</h5>
         </div>
@@ -17,7 +17,7 @@
             <h5>${{ $expense }}</h5>
         </div>
     </div>
-    <div class="row @if ($balance <= 0) {{ 'negative-balance' }} @else {{ 'positive-balance' }} @endif text-center">
+    <div class="row @if ($balance < 0) {{ 'negative-balance' }} @else {{ 'positive-balance' }} @endif text-center">
         <div class="col">
             <h5>Balance:</h5>
         </div>
@@ -41,17 +41,19 @@
     <div class="row">
         <div class="col">
         @foreach ($transactions as $t)
-            <div class="row @unless ('Income' == $t->category) {{ 'expense-amount' }} @endunless">
-                <div class="col">
-                    {{ $t->transaction_date->toFormattedDateString() }}
+            <a class='transaction-link' href="{{ route('show',$t->id) }}">
+                <div class="row @unless ('Income' == $t->category) {{ 'expense' }} @endunless">
+                    <div class="col">
+                        {{ $t->transaction_date->toFormattedDateString() }}
+                    </div>
+                    <div class="col">
+                        {{ $t->category }}
+                    </div>
+                    <div class="col text-right">
+                        ${{ $t->dollar_amount }}
+                    </div>
                 </div>
-                <div class="col">
-                    {{ $t->category }}
-                </div>
-                <div class="col text-right">
-                    ${{ $t->dollar_amount }}
-                </div>
-            </div>        
+            </a>        
         @endforeach
         </div>
     </div>
