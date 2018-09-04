@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <p>Name: {{ auth()->user()->name }}</p>
+                    <p>Email: {{ auth()->user()->email }}</p>
                 </div>
             </div>
         </div>
