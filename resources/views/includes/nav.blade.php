@@ -1,11 +1,11 @@
-<nav class="navbar fixed-bottom navbar-expand-xs navbar-dark bg-dark navbar-laravel">
+<nav class="navbar fixed-bottom navbar-expand-xs navbar-dark bg-dark">
     <div class="container">
         @auth
         <div class="collapse" id="filter-form">
             <div class="bg-dark">
                 <form class='form-inline' method='GET' action="{{ route('index') }}">
                     @csrf
-                    <div class='form-group'>
+                    <div class='form-group m-sm-1'>
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
                             <option value="Income">Income</option>
@@ -23,7 +23,7 @@
                             <option value="Car">Car</option>
                         </select>
                     </div>
-                    <div class='form-group'>
+                    <div class='form-group m-sm-1'>
                         <select name="month" id="month" class="custom-select custom-select-sm">
                             <option value="">Month</option>
                             <option value=01>January</option>
@@ -40,7 +40,7 @@
                             <option value=12>December</option>
                         </select>
                     </div>
-                    <div class='form-group'>
+                    <div class='form-group m-sm-1'>
                         <select name="year" id="year" class="custom-select custom-select-sm">
                             <option value="">Year</option>
                             <option value="2018">2018</option>
@@ -48,7 +48,7 @@
                             <option value="2020">2020</option>
                         </select>
                     </div>
-                    <button type='submit' class='btn btn-outline-success m-auto'>Submit</button>
+                    <button type='submit' class='btn btn-outline-success m-auto m-sm-1'>Submit</button>
                 </form>
             </div>
         </div>
@@ -81,7 +81,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">Home</a>
                     </li>
-                    <hr>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('index') }}">View Transactions</a>
                     </li>
