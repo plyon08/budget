@@ -13,6 +13,8 @@ class Transaction extends Model
      * @var array
      */
     protected $dates = ['transaction_date'];
+
+    protected $fillable = ['transaction_date', 'dollar_amount', 'category'];
     
 
     public function scopeCategory($query, $category)
