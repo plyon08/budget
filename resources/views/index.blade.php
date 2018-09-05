@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="row mt-4" style='border-bottom:1px solid black;'>
+    <div class="row mt-4 mb-3 column-headings">
         <div class="col">
             <h6>Date</h6>
         </div>

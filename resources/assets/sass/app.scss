@@ -8,11 +8,39 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+html, body
+{
+    background-color: $dark-gray;
+    height: 100vh;
+    color: $light-gray;
+}
+
 main
 {
     margin-bottom:100px;
 }
 
+#main-navbar
+{
+    box-shadow: 0px 1px 10px $gray;
+}
+
+#filter-form
+{
+    padding-left: 0rem;
+}
+
+.column-headings
+{
+    color: $gray;
+    border-bottom:1px solid $gray;
+}
+
+input
+{
+    color: $light-gray !important;
+    background-color: $dark-gray !important;
+}
 .btn-outline-warning
 {
     color: $orange !important;
@@ -52,7 +80,7 @@ main
 
 .transaction-link:link, .transaction-link:visited
 {
-    color: $black;
+    color: $light-gray;
     text-decoration: none;
 }
 
@@ -61,10 +89,11 @@ main
     font-weight: 700;
 }
 
-#filter-form
+.card
 {
-    padding-left: 0rem;
+    color: $black;
 }
+
 #alert
 {
     position: fixed;

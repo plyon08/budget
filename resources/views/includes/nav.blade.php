@@ -1,4 +1,4 @@
-<nav class="navbar fixed-bottom navbar-expand-xs navbar-dark bg-dark">
+<nav id="main-navbar" class="navbar fixed-bottom navbar-expand-xs navbar-dark bg-dark">
     <div class="container">
         @auth
         <div class="collapse" id="filter-form">
@@ -22,7 +22,7 @@
                             <option value="Rent">Rent</option>
                             <option value="Shopping">Shopping</option>
                             <option value="Savings">Savings</option>
-                            <option value="Electric">Utilities-Electric</option>
+                            <option value="Utilities-Electric">Utilities-Electric</option>
                             <option value="Utilities-Garbage">Utilities-Garbage</option>
                             <option value="Utilities-Natural Gas">Utilities-Natural Gas</option>
                             <option value="Utilities-Water">Utilities-Water</option>
