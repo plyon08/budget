@@ -1,11 +1,11 @@
-<nav id="main-navbar" class="navbar fixed-bottom navbar-expand-xs navbar-dark bg-dark">
-    <div class="container">
-        @auth
-        <div class="collapse" id="filter-form">
-            <div class="bg-dark">
-                <form class='form-inline justify-content-between' method='GET' action="{{ route('index') }}">
+<div class="row">
+    <nav id="main-navbar" class="navbar fixed-bottom navbar-expand-xs navbar-dark bg-dark">
+        <div class="col-12">
+            @auth
+            <div class="collapse navbar-collapse mb-sm-3" id="filter-form">
+                <form class='form-inline' method='GET' action="{{ route('index') }}">
                     @csrf
-                    <div class='form-group'>
+                    <div class='form-group mx-auto'>
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
                             <option value="Income">Income</option>
@@ -28,7 +28,7 @@
                             <option value="Utilities-Water">Utilities-Water</option>
                         </select>
                     </div>
-                    <div class='form-group ml-1 mr-1'>
+                    <div class='form-group mx-auto'>
                         <select name="month" id="month" class="custom-select custom-select-sm">
                             <option value="">Month</option>
                             <option value=01>January</option>
@@ -45,7 +45,7 @@
                             <option value=12>December</option>
                         </select>
                     </div>
-                    <div class='form-group'>
+                    <div class='form-group mx-auto'>
                         <select name="year" id="year" class="custom-select custom-select-sm">
                             <option value="">Year</option>
                             <option value="2018">2018</option>
@@ -53,54 +53,58 @@
                             <option value="2020">2020</option>
                         </select>
                     </div>
-                    <button type='submit' class='btn btn-outline-success m-auto m-sm-1'>Submit</button>
+                    <button type='submit' class='btn btn-outline-success mx-auto'>Submit</button>
                 </form>
             </div>
-        </div>
+            @endauth
 
-        <nav class="navbar navbar-dark bg-dark mr-auto">
-            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#filter-form" aria-controls="filter-form" aria-expanded="false" aria-label="Toggle navigation">
-                Filter
-            </button>
-        </nav>
-        @endauth
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav text-right">
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
 
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('index') }}">View Transactions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('create') }}">Add Transaction</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li> --}}
+                    @endauth
+                </ul>
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav text-right">
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            Logout
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('index') }}">View Transactions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('create') }}">Add Transaction</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
-                    </li> --}}
-                @endauth
+            <ul class="nav justify-content-between">
+                <li class="nav-item">
+                    <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#filter-form" aria-controls="filter-form" aria-expanded="false" aria-label="Toggle navigation">
+                        Filter
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </li>
             </ul>
+            
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

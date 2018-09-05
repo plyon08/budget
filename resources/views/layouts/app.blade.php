@@ -11,7 +11,9 @@
         @yield('content')
     </main>
 
-    @include('includes.nav')
+    <div class="container">
+        @include('includes.nav')
+    </div>
 
 </body>
 </html>
