@@ -48,14 +48,14 @@ class TransactionController extends Controller
         foreach ($transactions as $t) {
             if ('Income' == $t->category) {
                 $income += $t->dollar_amount;
-                $income = number_format($income, 2);
             } else {
                 $expense += $t->dollar_amount;
-                $expense = number_format($expense, 2);
             }
             $balance = $income - $expense;
-            $balance = number_format($balance, 2);
         }
+        $income = number_format($income, 2);
+        $expense = number_format($expense, 2);
+        $balance = number_format($balance, 2);
 
         return view('index', compact('transactions', 'income', 'expense', 'balance'));
     }
@@ -89,6 +89,7 @@ class TransactionController extends Controller
         $transaction->transaction_date = request('transaction_date');
         $transaction->dollar_amount = request('dollar_amount');
         $transaction->category = request('category');
+        $transaction->notes = request('notes');
 
         $transaction->save();
 
@@ -139,6 +140,7 @@ class TransactionController extends Controller
         $transaction->transaction_date = request('transaction_date');
         $transaction->dollar_amount = request('dollar_amount');
         $transaction->category = request('category');
+        $transaction->notes = request('notes');
         
         $transaction->save();
 

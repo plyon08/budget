@@ -9,18 +9,23 @@
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
                             <option value="Income">Income</option>
+                            <option value="Car">Car</option>
+                            <option value="Car Insurance">Car Insurance</option>
+                            <option value="Eating Out">Eating Out</option>
                             <option value="Entertainment">Entertainment</option>
                             <option value="Gas">Gas</option>
                             <option value="Groceries">Groceries</option>
-                            <option value="Eating Out">Eating Out</option>
-                            <option value="Shopping">Shopping</option>
-                            <option value="Rent">Rent</option>
-                            <option value="Phone">Phone</option>
-                            <option value="Internet">Internet</option>
-                            <option value="Electric">Electric</option>
-                            <option value="Car Insurance">Car Insurance</option>
                             <option value="Health Insurance">Health Insurance</option>
-                            <option value="Car">Car</option>
+                            <option value="Household">Household</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Savings">Savings</option>
+                            <option value="Electric">Utilities-Electric</option>
+                            <option value="Utilities-Garbage">Utilities-Garbage</option>
+                            <option value="Utilities-Natural Gas">Utilities-Natural Gas</option>
+                            <option value="Utilities-Water">Utilities-Water</option>
                         </select>
                     </div>
                     <div class='form-group ml-1 mr-1'>

@@ -29,41 +29,62 @@
                         <input type="radio" class="form-check-input" name="category" value="Income"> Income
                     </label>
                     <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Car"> Car
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Car Insurance"> Car Insurance
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Eating Out"> Eating Out
+                    </label>
+                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Entertainment"> Entertainment
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Gas"> Gas
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Shopping"> Shopping
-                    </label>
-                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Groceries"> Groceries
-                    </label>
-                    <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Eating Out"> Eating Out
-                    </label>
-                    <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Rent"> Rent
-                    </label>
-                    <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Phone"> Phone
-                    </label>
-                    <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Internet"> Internet
-                    </label>
-                    <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Electric"> Electric
-                    </label>
-                    <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Car Insurance"> Car Insurance
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Health Insurance"> Health Insurance
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Car"> Car
+                        <input type="radio" class="form-check-input" name="category" value="Household"> Household
                     </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Internet"> Internet
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Phone"> Phone
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Rent"> Rent
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Shopping"> Shopping
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Savings"> Savings
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Utilities-Electric"> Utilities-Electric
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Utilities-Garbage"> Utilities-Garbage
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Utilities-Natural Gas"> Utilities-Natural Gas
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Utilities-Water"> Utilities-Water
+                    </label>
+                </div>
+                <div class="input-group py-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Notes:</span>
+                    </div>
+                    <input id="notes" type="text" class="form-control" name="notes">
                 </div>
                 <div class='row justify-content-md-start'>
                     <div class='col col-md-6 col-lg-1'>

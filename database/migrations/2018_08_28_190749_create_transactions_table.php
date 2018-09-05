@@ -19,6 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->date('transaction_date');
             $table->decimal('dollar_amount');
             $table->string('category');
+            $table->text('notes')->nullable();
             $table->boolean('repeat')->nullable();
             $table->timestamps();
         });
