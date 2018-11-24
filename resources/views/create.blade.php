@@ -29,6 +29,9 @@
                         <input type="radio" class="form-check-input" name="category" value="Income"> Income
                     </label>
                     <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Cashback"> Cashback
+                    </label>
+                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Car"> Car
                     </label>
                     <label class="btn btn-outline-info">
@@ -56,16 +59,22 @@
                         <input type="radio" class="form-check-input" name="category" value="Internet"> Internet
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Phone"> Phone
+                        <input type="radio" class="form-check-input" name="category" value="Mortgage"> Mortgage
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Rent"> Rent
+                        <input type="radio" class="form-check-input" name="category" value="Other"> Other
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Phone"> Phone
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Shopping"> Shopping
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Savings"> Savings
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Student Loan"> Student Loan
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Utilities-Electric"> Utilities-Electric

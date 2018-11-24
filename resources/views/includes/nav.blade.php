@@ -9,6 +9,7 @@
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
                             <option value="Income">Income</option>
+                            <option value="Cashback">Cashback</option>
                             <option value="Car">Car</option>
                             <option value="Car Insurance">Car Insurance</option>
                             <option value="Eating Out">Eating Out</option>
@@ -18,10 +19,12 @@
                             <option value="Health Insurance">Health Insurance</option>
                             <option value="Household">Household</option>
                             <option value="Internet">Internet</option>
+                            <option value="Mortgage">Mortgage</option>
+                            <option value="Other">Other</option>
                             <option value="Phone">Phone</option>
-                            <option value="Rent">Rent</option>
                             <option value="Shopping">Shopping</option>
                             <option value="Savings">Savings</option>
+                            <option value="Student Loan">Student Loan</option>
                             <option value="Utilities-Electric">Utilities-Electric</option>
                             <option value="Utilities-Garbage">Utilities-Garbage</option>
                             <option value="Utilities-Natural Gas">Utilities-Natural Gas</option>
@@ -48,9 +51,9 @@
                     <div class='form-group mx-auto'>
                         <select name="year" id="year" class="custom-select custom-select-sm">
                             <option value="">Year</option>
-                            <option value="2018">2018</option>
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
+                            @for ($i = 2018; $i < 2049; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
                         </select>
                     </div>
                     <button type='submit' class='btn btn-outline-success mx-auto'>Submit</button>
