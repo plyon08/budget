@@ -29,6 +29,9 @@
                         <input type="radio" class="form-check-input" name="category" value="Income"> Income
                     </label>
                     <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Interest"> Interest
+                    </label>
+                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Cashback"> Cashback
                     </label>
                     <label class="btn btn-outline-info">

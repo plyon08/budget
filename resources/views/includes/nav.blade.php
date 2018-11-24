@@ -9,6 +9,7 @@
                         <select name="category" id="category" class='custom-select custom-select-sm'>
                             <option value="">Category</option>
                             <option value="Income">Income</option>
+                            <option value="Interest">Interest</option>
                             <option value="Cashback">Cashback</option>
                             <option value="Car">Car</option>
                             <option value="Car Insurance">Car Insurance</option>

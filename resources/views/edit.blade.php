@@ -29,6 +29,12 @@
                     <label class="btn btn-outline-info @if ('Income' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Income" @if ('Income' === $transaction->category) checked @endif> Income
                     </label>
+                    <label class="btn btn-outline-info @if ('Interest' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Interest" @if ('Interest' === $transaction->category) checked @endif> Interest
+                    </label>
+                    <label class="btn btn-outline-info @if ('Cashback' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Cashback" @if ('Cashback' === $transaction->category) checked @endif> Cashback
+                    </label>
                     <label class="btn btn-outline-info @if ('Car' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Car" @if ('Car' === $transaction->category) checked @endif> Car
                     </label>
@@ -56,17 +62,23 @@
                     <label class="btn btn-outline-info @if ('Internet' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Internet" @if ('Internet' === $transaction->category) checked @endif> Internet
                     </label>
+                    <label class="btn btn-outline-info @if ('Mortgage' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Mortgage" @if ('Mortgage' === $transaction->category) checked @endif> Mortgage
+                    </label>
+                    <label class="btn btn-outline-info @if ('Other' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Other" @if ('Other' === $transaction->category) checked @endif> Other
+                    </label>
                     <label class="btn btn-outline-info @if ('Phone' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Phone" @if ('Phone' === $transaction->category) checked @endif> Phone
-                    </label>
-                    <label class="btn btn-outline-info @if ('Rent' === $transaction->category) active @endif">
-                        <input type="radio" class="form-check-input" name="category" value="Rent" @if ('Rent' === $transaction->category) checked @endif> Rent
                     </label>
                     <label class="btn btn-outline-info @if ('Shopping' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Shopping" @if ('Shopping' === $transaction->category) checked @endif> Shopping
                     </label>
                     <label class="btn btn-outline-info @if ('Savings' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Savings" @if ('Savings' === $transaction->category) checked @endif> Savings
+                    </label>
+                    <label class="btn btn-outline-info @if ('Student Loan' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Student Loan" @if ('Student Loan' === $transaction->category) checked @endif> Student Loan
                     </label>
                     <label class="btn btn-outline-info @if ('Utilities-Electric' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Utilities-Electric" @if ('Utilities-Electric' === $transaction->category) checked @endif> Utilities-Electric

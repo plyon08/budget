@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <h4>Transaction Date: {{ $transaction->transaction_date->toFormattedDateString() }}</h4>
-            <h4 class="@unless ('Income' == $transaction->category || 'Cashback' == $transaction->category){{ 'expense' }}@endunless">Amount: ${{ $transaction->dollar_amount }}</h4>
+            <h4 class="@unless ('Income' == $transaction->category || 'Interest' == $transaction->category || 'Cashback' == $transaction->category){{ 'expense' }}@endunless">Amount: ${{ $transaction->dollar_amount }}</h4>
             <h4>Category: {{ $transaction->category }}</h4>
             <h4>Notes: {{ $transaction->notes }}</h4>
         </div>
