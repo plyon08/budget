@@ -46,7 +46,7 @@ class TransactionController extends Controller
         $transactions = $query->get();
 
         foreach ($transactions as $t) {
-            if ('Income' == $t->category) {
+            if ('Income' == $t->category || 'Cashback' == $t->category) {
                 $income += $t->dollar_amount;
             } else {
                 $expense += $t->dollar_amount;

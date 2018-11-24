@@ -42,7 +42,7 @@
         <div class="col">
         @foreach ($transactions as $t)
             <a class='transaction-link' href="{{ route('show',$t->id) }}">
-                <div class="row @unless ('Income' == $t->category) {{ 'expense' }} @endunless">
+                <div class="row @unless ('Income' == $t->category || 'Cashback' == $t->category) {{ 'expense' }} @endunless">
                     <div class="col">
                         {{ $t->transaction_date->toFormattedDateString() }}
                     </div>
