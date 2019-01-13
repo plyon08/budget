@@ -24,7 +24,13 @@
                     </div>
                     <input id="dollar_amount" type="number" class="form-control" name="dollar_amount" placeholder="0.00" step="0.01" required>
                 </div>
-                <div class="input-group btn-group-vertical btn-group-toggle py-3" data-toggle="buttons">
+                <div class="input-group py-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Category:</span>
+                    </div>
+                    <a id="category-button" href="#category-list" class="btn btn-outline-info form-control" data-toggle="collapse"></a>
+                </div>
+                <div id="category-list" class="input-group btn-group-vertical btn-group-toggle py-3 collapse" data-toggle="buttons">
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Income"> Income
                     </label>
@@ -53,9 +59,6 @@
                         <input type="radio" class="form-check-input" name="category" value="Groceries"> Groceries
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Health Insurance"> Health Insurance
-                    </label>
-                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Household"> Household
                     </label>
                     <label class="btn btn-outline-info">
@@ -77,10 +80,16 @@
                         <input type="radio" class="form-check-input" name="category" value="Savings"> Savings
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Savings Deposit"> Savings Deposit
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Deposit"> Savings-Deposit
                     </label>
                     <label class="btn btn-outline-info">
-                        <input type="radio" class="form-check-input" name="category" value="Savings Withdrawal"> Savings Withdrawal
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Withdrawal"> Savings-Withdrawal
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Interest"> Savings-Interest
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Cashback"> Savings-Cashback
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Student Loan"> Student Loan

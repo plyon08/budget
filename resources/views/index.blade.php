@@ -50,7 +50,7 @@
         <div class="col">
         @foreach ($transactions as $t)
             <a class='transaction-link' href="{{ route('show',$t->id) }}">
-                <div class="row @if ('Income' == $t->category || 'Interest' == $t->category || 'Cashback' == $t->category) {{ '' }} @elseif ('Savings' == $t->category || 'Savings Deposit' == $t->category || 'Savings Withdrawal' == $t->category) {{ 'savings' }} @else {{ 'expense' }} @endif">
+                <div class="row @if ('Income' == $t->category || 'Interest' == $t->category || 'Cashback' == $t->category) {{ '' }} @elseif ('Savings' == $t->category || 'Savings-Deposit' == $t->category || 'Savings-Withdrawal' == $t->category || 'Savings-Interest' == $t->category || 'Savings-Cashback' == $t->category) {{ 'savings' }} @else {{ 'expense' }} @endif">
                     <div class="col">
                         {{ $t->transaction_date->toFormattedDateString() }}
                     </div>

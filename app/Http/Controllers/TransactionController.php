@@ -54,9 +54,9 @@ class TransactionController extends Controller
                 $income += $t->dollar_amount;
             } elseif ('Savings' == $t->category) {
                 $savings += $t->dollar_amount;
-            } elseif ('Savings Deposit' == $t->category) {
+            } elseif ('Savings-Deposit' == $t->category || 'Savings-Interest' == $t->category || 'Savings-Cashback' == $t->category) {
                 $savings_deposit += $t->dollar_amount;
-            } elseif ('Savings Withdrawal' == $t->category) {
+            } elseif ('Savings-Withdrawal' == $t->category) {
                 $savings_withdrawal += $t->dollar_amount;
             } else {
                 $expense += $t->dollar_amount;
@@ -105,6 +105,10 @@ class TransactionController extends Controller
         $transaction->dollar_amount = request('dollar_amount');
         $transaction->category = request('category');
         $transaction->notes = request('notes');
+
+        if ($transaction->category == 'Savings-Cashback') {
+            $transaction->dollar_amount *= 1.10;
+        }
 
         $transaction->save();
 

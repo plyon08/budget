@@ -25,7 +25,13 @@
                     </div>
                     <input id="dollar_amount" type="number" class="form-control" name="dollar_amount" placeholder="0.00" step="0.01" value="{{ $transaction->dollar_amount }}" required>
                 </div>
-                <div class="input-group btn-group-vertical btn-group-toggle py-3" data-toggle="buttons">
+                <div class="input-group py-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Category:</span>
+                    </div>
+                    <a id="category-button" href="#category-list" class="btn btn-outline-info form-control" data-toggle="collapse">{{ $transaction->category }}</a>
+                </div>
+                <div id="category-list" class="input-group btn-group-vertical btn-group-toggle py-3 collapse" data-toggle="buttons">
                     <label class="btn btn-outline-info @if ('Income' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Income" @if ('Income' === $transaction->category) checked @endif> Income
                     </label>
@@ -53,9 +59,6 @@
                     <label class="btn btn-outline-info @if ('Groceries' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Groceries" @if ('Groceries' === $transaction->category) checked @endif> Groceries
                     </label>
-                    <label class="btn btn-outline-info @if ('Health Insurance' === $transaction->category) active @endif">
-                        <input type="radio" class="form-check-input" name="category" value="Health Insurance" @if ('Health Insurance' === $transaction->category) checked @endif> Health Insurance
-                    </label>
                     <label class="btn btn-outline-info @if ('Household' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Household" @if ('Household' === $transaction->category) checked @endif> Household
                     </label>
@@ -77,11 +80,17 @@
                     <label class="btn btn-outline-info @if ('Savings' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Savings" @if ('Savings' === $transaction->category) checked @endif> Savings
                     </label>
-                    <label class="btn btn-outline-info @if ('Savings Deposit' === $transaction->category) active @endif">
-                        <input type="radio" class="form-check-input" name="category" value="Savings Deposit" @if ('Savings Deposit' === $transaction->category) checked @endif> Savings Deposit
+                    <label class="btn btn-outline-info @if ('Savings-Deposit' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Deposit" @if ('Savings-Deposit' === $transaction->category) checked @endif> Savings-Deposit
                     </label>
-                    <label class="btn btn-outline-info @if ('Savings Withdrawal' === $transaction->category) active @endif">
-                        <input type="radio" class="form-check-input" name="category" value="Savings Withdrawal" @if ('Savings Withdrawal' === $transaction->category) checked @endif> Savings Withdrawal
+                    <label class="btn btn-outline-info @if ('Savings-Withdrawal' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Withdrawal" @if ('Savings-Withdrawal' === $transaction->category) checked @endif> Savings-Withdrawal
+                    </label>
+                    <label class="btn btn-outline-info @if ('Savings-Interest' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Interest" @if ('Savings-Interest' === $transaction->category) checked @endif> Savings-Interest
+                    </label>
+                    <label class="btn btn-outline-info @if ('Savings-Cashback' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Savings-Cashback" @if ('Savings-Cashback' === $transaction->category) checked @endif> Savings-Cashback
                     </label>
                     <label class="btn btn-outline-info @if ('Student Loan' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Student Loan" @if ('Student Loan' === $transaction->category) checked @endif> Student Loan

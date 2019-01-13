@@ -17,7 +17,6 @@
                             <option value="Entertainment">Entertainment</option>
                             <option value="Gas">Gas</option>
                             <option value="Groceries">Groceries</option>
-                            <option value="Health Insurance">Health Insurance</option>
                             <option value="Household">Household</option>
                             <option value="Internet">Internet</option>
                             <option value="Mortgage">Mortgage</option>
@@ -25,8 +24,10 @@
                             <option value="Phone">Phone</option>
                             <option value="Shopping">Shopping</option>
                             <option value="Savings">Savings</option>
-                            <option value="Savings">Savings Deposit</option>
-                            <option value="Savings Withdrawal">Savings Withdrawal</option>
+                            <option value="Savings-Deposit">Savings-Deposit</option>
+                            <option value="Savings-Withdrawal">Savings-Withdrawal</option>
+                            <option value="Savings-Interest">Savings-Interest</option>
+                            <option value="Savings-Cashback">Savings-Cashback</option>
                             <option value="Student Loan">Student Loan</option>
                             <option value="Utilities-Electric">Utilities-Electric</option>
                             <option value="Utilities-Garbage">Utilities-Garbage</option>

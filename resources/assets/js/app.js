@@ -25,4 +25,9 @@ $(document).ready(function() {
     setTimeout(function() {
       $('#alert').fadeOut('fast');
     }, 3000);
+
+    $('input[name="category"]').on('change', function() {
+        $('#category-list').collapse('toggle');
+        $('#category-button').html($(this).val());
+    });
 });
