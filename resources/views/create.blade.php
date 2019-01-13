@@ -77,6 +77,12 @@
                         <input type="radio" class="form-check-input" name="category" value="Savings"> Savings
                     </label>
                     <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Savings Deposit"> Savings Deposit
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Savings Withdrawal"> Savings Withdrawal
+                    </label>
+                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Student Loan"> Student Loan
                     </label>
                     <label class="btn btn-outline-info">

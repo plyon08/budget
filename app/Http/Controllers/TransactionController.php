@@ -28,6 +28,10 @@ class TransactionController extends Controller
         $balance = 0.00;
         $income = 0.00;
         $expense = 0.00;
+        $savings = 0.00;
+        $savings_deposit = 0.00;
+        $savings_withdrawal = 0.00;
+        $total_savings = 0.00;
         $query = Transaction::orderBy('transaction_date', 'desc');
 
         if (!empty($request->input('category'))) {
@@ -48,16 +52,27 @@ class TransactionController extends Controller
         foreach ($transactions as $t) {
             if ('Income' == $t->category || 'Interest' == $t->category || 'Cashback' == $t->category) {
                 $income += $t->dollar_amount;
+            } elseif ('Savings' == $t->category) {
+                $savings += $t->dollar_amount;
+            } elseif ('Savings Deposit' == $t->category) {
+                $savings_deposit += $t->dollar_amount;
+            } elseif ('Savings Withdrawal' == $t->category) {
+                $savings_withdrawal += $t->dollar_amount;
             } else {
                 $expense += $t->dollar_amount;
             }
-            $balance = $income - $expense;
         }
+
+        $balance = $income - $expense - $savings + $savings_withdrawal;
+
+        $total_savings = $savings + $savings_deposit - $savings_withdrawal;
+
         $income = number_format($income, 2);
         $expense = number_format($expense, 2);
         $balance = number_format($balance, 2);
+        $total_savings = number_format($total_savings, 2);
 
-        return view('index', compact('transactions', 'income', 'expense', 'balance'));
+        return view('index', compact('transactions', 'income', 'expense', 'balance', 'total_savings'));
     }
 
     /**

@@ -25,6 +25,8 @@
                             <option value="Phone">Phone</option>
                             <option value="Shopping">Shopping</option>
                             <option value="Savings">Savings</option>
+                            <option value="Savings">Savings Deposit</option>
+                            <option value="Savings Withdrawal">Savings Withdrawal</option>
                             <option value="Student Loan">Student Loan</option>
                             <option value="Utilities-Electric">Utilities-Electric</option>
                             <option value="Utilities-Garbage">Utilities-Garbage</option>
@@ -52,7 +54,10 @@
                     <div class='form-group mx-auto'>
                         <select name="year" id="year" class="custom-select custom-select-sm">
                             <option value="">Year</option>
-                            @for ($i = 2018; $i < 2049; $i++)
+                            @php
+                                $date = getdate();
+                            @endphp
+                            @for ($i = 2018; $i <= $date['year']; $i++)
                             <option value="{{ $i }}">{{ $i }}</option>
                             @endfor
                         </select>

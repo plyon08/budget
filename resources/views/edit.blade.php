@@ -77,6 +77,12 @@
                     <label class="btn btn-outline-info @if ('Savings' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Savings" @if ('Savings' === $transaction->category) checked @endif> Savings
                     </label>
+                    <label class="btn btn-outline-info @if ('Savings Deposit' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Savings Deposit" @if ('Savings Deposit' === $transaction->category) checked @endif> Savings Deposit
+                    </label>
+                    <label class="btn btn-outline-info @if ('Savings Withdrawal' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Savings Withdrawal" @if ('Savings Withdrawal' === $transaction->category) checked @endif> Savings Withdrawal
+                    </label>
                     <label class="btn btn-outline-info @if ('Student Loan' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Student Loan" @if ('Student Loan' === $transaction->category) checked @endif> Student Loan
                     </label>

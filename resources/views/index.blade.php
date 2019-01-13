@@ -25,6 +25,14 @@
             <h5>${{ $balance }}</h5>
         </div>
     </div>
+    <div class="row savings text-center">
+        <div class="col">
+            <h5>Savings:</h5>
+        </div>
+        <div class="col">
+            <h5>${{ $total_savings }}</h5>
+        </div>
+    </div>
 
     <div class="row mt-4 mb-3 column-headings">
         <div class="col">
@@ -42,7 +50,7 @@
         <div class="col">
         @foreach ($transactions as $t)
             <a class='transaction-link' href="{{ route('show',$t->id) }}">
-                <div class="row @unless ('Income' == $t->category || 'Interest' == $t->category || 'Cashback' == $t->category) {{ 'expense' }} @endunless">
+                <div class="row @if ('Income' == $t->category || 'Interest' == $t->category || 'Cashback' == $t->category) {{ '' }} @elseif ('Savings' == $t->category || 'Savings Deposit' == $t->category || 'Savings Withdrawal' == $t->category) {{ 'savings' }} @else {{ 'expense' }} @endif">
                     <div class="col">
                         {{ $t->transaction_date->toFormattedDateString() }}
                     </div>
