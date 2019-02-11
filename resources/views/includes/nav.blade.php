@@ -23,6 +23,7 @@
                             <option value="Other">Other</option>
                             <option value="Phone">Phone</option>
                             <option value="Shopping">Shopping</option>
+                            <option value="Savings-All">Savings-All</option>
                             <option value="Savings">Savings</option>
                             <option value="Savings-Deposit">Savings-Deposit</option>
                             <option value="Savings-Withdrawal">Savings-Withdrawal</option>

@@ -19,12 +19,16 @@ class Transaction extends Model
 
     public function scopeCategory($query, $category)
     {
-        return $query->where('category', $category);
+        if ($category == 'Savings-All') {
+            return $query->where('category', 'like', "Savings%");
+        } else {
+            return $query->where('category', $category);
+        }
     }
 
     public function scopeMonth($query, $month)
     {
-        $query->where('transaction_date', 'like', "%-$month-%");
+        return $query->where('transaction_date', 'like', "%-$month-%");
     }
 
     public function scopeYear($query, $year)
