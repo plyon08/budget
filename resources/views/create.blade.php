@@ -14,15 +14,15 @@
                 @csrf
                 <div class="input-group py-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Date:</span>
-                    </div>
-                    <input id="transaction_date" type="date" class="form-control" name="transaction_date" required>
-                </div>
-                <div class="input-group py-3">
-                    <div class="input-group-prepend">
                         <span class="input-group-text">Amount:</span>
                     </div>
                     <input id="dollar_amount" type="number" class="form-control" name="dollar_amount" placeholder="0.00" step="0.01" required>
+                </div>
+                <div class="input-group py-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Date:</span>
+                    </div>
+                    <input id="transaction_date" type="date" class="form-control" name="transaction_date" required>
                 </div>
                 <div class="input-group py-3">
                     <div class="input-group-prepend">
