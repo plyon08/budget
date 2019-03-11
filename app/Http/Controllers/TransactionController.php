@@ -114,10 +114,6 @@ class TransactionController extends Controller
         $transaction->category = request('category');
         $transaction->notes = request('notes');
 
-        if ($transaction->category == 'Savings-Cashback') {
-            $transaction->dollar_amount *= 1.10;
-        }
-
         $transaction->save();
 
         session()->flash('message', 'Transaction Saved Successfully!');
