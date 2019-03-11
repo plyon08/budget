@@ -99,9 +99,17 @@ class TransactionController extends Controller
             'category' => 'required'
         ]);
 
+        $time_now = Carbon::now()->setTimezone('America/Winnipeg');
         $transaction = new Transaction;
 
-        $transaction->transaction_date = request('transaction_date');
+        $time_now_array = explode(" ", $time_now);
+        $transaction_date_array = explode(" ", request('transaction_date'));
+        $temp_transaction_date = [
+            0 => $transaction_date_array[0],
+            1 => $time_now_array[1]
+        ];
+
+        $transaction->transaction_date = implode(" ", $temp_transaction_date);
         $transaction->dollar_amount = request('dollar_amount');
         $transaction->category = request('category');
         $transaction->notes = request('notes');
@@ -156,7 +164,14 @@ class TransactionController extends Controller
 
         $transaction = Transaction::find($transaction->id);
 
-        $transaction->transaction_date = request('transaction_date');
+        $old_transaction_date_array = explode(" ", $transaction->transaction_date);
+        $transaction_date_array = explode(" ", request('transaction_date'));
+        $temp_transaction_date = [
+            0 => $transaction_date_array[0],
+            1 => $old_transaction_date_array[1]
+        ];
+
+        $transaction->transaction_date = implode(" ", $temp_transaction_date);
         $transaction->dollar_amount = request('dollar_amount');
         $transaction->category = request('category');
         $transaction->notes = request('notes');
