@@ -47,6 +47,9 @@
                         <input type="radio" class="form-check-input" name="category" value="Car Insurance"> Car Insurance
                     </label>
                     <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Child Care"> Child Care
+                    </label>
+                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Eating Out"> Eating Out
                     </label>
                     <label class="btn btn-outline-info">
@@ -65,10 +68,16 @@
                         <input type="radio" class="form-check-input" name="category" value="Internet"> Internet
                     </label>
                     <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Medical"> Medical
+                    </label>
+                    <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Mortgage"> Mortgage
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Other"> Other
+                    </label>
+                    <label class="btn btn-outline-info">
+                        <input type="radio" class="form-check-input" name="category" value="Personal Care"> Personal Care
                     </label>
                     <label class="btn btn-outline-info">
                         <input type="radio" class="form-check-input" name="category" value="Phone"> Phone

@@ -47,6 +47,9 @@
                     <label class="btn btn-outline-info @if ('Car Insurance' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Car Insurance" @if ('Car Insurance' === $transaction->category) checked @endif> Car Insurance
                     </label>
+                    <label class="btn btn-outline-info @if ('Child Care' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Child Care" @if ('Child Care' === $transaction->category) checked @endif> Child Care
+                    </label>
                     <label class="btn btn-outline-info @if ('Eating Out' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Eating Out" @if ('Eating Out' === $transaction->category) checked @endif> Eating Out
                     </label>
@@ -65,11 +68,17 @@
                     <label class="btn btn-outline-info @if ('Internet' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Internet" @if ('Internet' === $transaction->category) checked @endif> Internet
                     </label>
+                    <label class="btn btn-outline-info @if ('Medical' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Medical" @if ('Medical' === $transaction->category) checked @endif> Medical
+                    </label>
                     <label class="btn btn-outline-info @if ('Mortgage' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Mortgage" @if ('Mortgage' === $transaction->category) checked @endif> Mortgage
                     </label>
                     <label class="btn btn-outline-info @if ('Other' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Other" @if ('Other' === $transaction->category) checked @endif> Other
+                    </label>
+                    <label class="btn btn-outline-info @if ('Personal Care' === $transaction->category) active @endif">
+                        <input type="radio" class="form-check-input" name="category" value="Personal Care" @if ('Personal Care' === $transaction->category) checked @endif> Personal Care
                     </label>
                     <label class="btn btn-outline-info @if ('Phone' === $transaction->category) active @endif">
                         <input type="radio" class="form-check-input" name="category" value="Phone" @if ('Phone' === $transaction->category) checked @endif> Phone

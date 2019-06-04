@@ -13,14 +13,17 @@
                             <option value="Cashback">Cashback</option>
                             <option value="Car">Car</option>
                             <option value="Car Insurance">Car Insurance</option>
+                            <option value="Child Care">Child Care</option>
                             <option value="Eating Out">Eating Out</option>
                             <option value="Entertainment">Entertainment</option>
                             <option value="Gas">Gas</option>
                             <option value="Groceries">Groceries</option>
                             <option value="Household">Household</option>
                             <option value="Internet">Internet</option>
+                            <option value="Medical">Medical</option>
                             <option value="Mortgage">Mortgage</option>
                             <option value="Other">Other</option>
+                            <option value="Personal Care">Personal Care</option>
                             <option value="Phone">Phone</option>
                             <option value="Shopping">Shopping</option>
                             <option value="Savings-All">Savings-All</option>
